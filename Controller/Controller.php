@@ -1,16 +1,16 @@
 <?php
 
-namespace XVweb\Bundle\SymfonyBridgeBundle\Controller;
+namespace XVEngine\Bundle\SymfonyBridgeBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller as ControllerAbstract;
 use XVEngine\Core\Handler\ServiceHandler;
-use XVweb\Bundle\SymfonyBridgeBundle\Response\XvResponse;
+use XVEngine\Bundle\SymfonyBridgeBundle\Response\XvResponse;
 
 
 /**
  * Class Controller
  * @author Krzysztof Bednarczyk
- * @package XVweb\Bundle\SymfonyBridgeBundle\Controller
+ * @package XVEngine\Bundle\SymfonyBridgeBundle\Controller
  */
 class Controller extends ControllerAbstract
 {

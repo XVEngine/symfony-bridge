@@ -6,7 +6,7 @@
  * Time: 9:50 AM
  */
 
-namespace XVweb\Bundle\SymfonyBridgeBundle\Controller;
+namespace XVEngine\Bundle\SymfonyBridgeBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -53,7 +53,7 @@ class BootstrapController extends Controller
             'scripts' => $this->getScripts(),
         );
 
-        $response = $this->render('@XVwebSymfonyBridge/Default/bootstrap.html.twig', $params);
+        $response = $this->render('@XVEngineSymfonyBridge/Default/bootstrap.html.twig', $params);
 
 
         $response->setPrivate();

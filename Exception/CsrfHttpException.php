@@ -5,7 +5,7 @@
  * Time: 11:14
  */
 
-namespace XVweb\Bundle\SymfonyBridgeBundle\Exception;
+namespace XVEngine\Bundle\SymfonyBridgeBundle\Exception;
 
 
 use Symfony\Component\HttpKernel\Exception\HttpException;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace XVweb\Bundle\SymfonyBridgeBundle\Response;
+namespace XVEngine\Bundle\SymfonyBridgeBundle\Response;
 
 use DateTime;
 use Symfony\Component\HttpFoundation\JsonResponse;

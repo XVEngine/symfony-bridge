@@ -1,6 +1,6 @@
 <?php
 
-namespace XVweb\Bundle\SymfonyBridgeBundle\EventListener;
+namespace XVEngine\Bundle\SymfonyBridgeBundle\EventListener;
 
 use Symfony\Component\DependencyInjection\ContainerAwareTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -13,15 +13,15 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use XVEngine\Core\Handler\HistoryHandler;
-use XVweb\Bundle\SymfonyBridgeBundle\Controller\BootstrapController;
-use XVweb\Bundle\SymfonyBridgeBundle\Controller\Controller;
-use XVweb\Bundle\SymfonyBridgeBundle\Exception\CsrfHttpException;
-use XVweb\Bundle\SymfonyBridgeBundle\Response\XvResponse;
+use XVEngine\Bundle\SymfonyBridgeBundle\Controller\BootstrapController;
+use XVEngine\Bundle\SymfonyBridgeBundle\Controller\Controller;
+use XVEngine\Bundle\SymfonyBridgeBundle\Exception\CsrfHttpException;
+use XVEngine\Bundle\SymfonyBridgeBundle\Response\XvResponse;
 
 /**
  * Class KernelListener
  * @author Krzysztof Bednarczyk
- * @package XVweb\Bundle\SymfonyBridgeBundle\EventListener
+ * @package XVEngine\Bundle\SymfonyBridgeBundle\EventListener
  */
 class KernelListener
 {
