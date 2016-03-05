@@ -1,0 +1,59 @@
+<html>
+<head>
+    <!--
+
+   _____ _       _           _     _______        _       _
+  / ____| |     | |         | |   |__   __|      (_)     (_)
+ | |  __| | ___ | |__   __ _| |   ___| |_ __ __ _ _ _ __  _ _ __   __ _
+ | | |_ | |/ _ \| '_ \ / _` | |  / _ \ | '__/ _` | | '_ \| | '_ \ / _` |
+ | |__| | | (_) | |_) | (_| | | |  __/ | | | (_| | | | | | | | | | (_| |
+  \_____|_|\___/|_.__/ \__,_|_|  \___|_|_|  \__,_|_|_| |_|_|_| |_|\__, |
+                                                                   __/ |
+                                                                  |___/
+                                                                     DEMO
+    Code author: Krzysztof Bednarczyk
+    Website: http://bednarczyk.me
+    -->
+    <meta charset="utf-8">
+    <title>Global eTraining demo</title>
+    {% for file in css %}
+        <link rel="stylesheet" type="text/css" href="{{ asset(file) }}">
+    {% endfor %}
+    <meta name="viewport" content="width=512, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="msapplication-TileColor" content="#de153d">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+    <meta name="apple-mobile-web-app-title" content="Demo for Global eTraining">
+    <meta name="application-name" content="Global eTraining">
+    <meta name="theme-color" content="#de153d">
+    <meta name="twitter:site" content="@tattool_eu">
+    <script type="application/ld+json">
+            {% if jsonLd is iterable %}
+        {{ jsonLd|json_encode()|raw }}
+    {% else %}
+    {{ jsonLd|raw }}
+        {% endif %}
+        </script>
+</head>
+<body>
+
+{% for file in js %}
+    <script class="xv-bootstrap-remove" type="text/javascript" src="{{ asset(file) }}" defer></script>
+{% endfor %}
+
+{% for script in scripts %}
+    <script type="text/javascript" class="xv-bootstrap-remove" defer>
+        {{ script|raw }}
+    </script>
+{% endfor %}
+
+<script class="xv-bootstrap-remove">
+    window.addEventListener("load", function () {
+        (new application.bootstrap( {{ bootstrapHandlers|json_encode()|raw }} )).init();
+    }, false);
+</script>
+
+</body>
+</html>
